@@ -1,0 +1,19 @@
+# INICIO - REGLAS DE SEGURIDAD GENERADAS POR EDITOR LP
+<IfModule mod_headers.c>
+    # Endurecimiento de Cabeceras de Seguridad
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://player.vimeo.com https://www.youtube.com; img-src 'self' data: https:; object-src 'none';"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Habilitar HSTS (Strict Transport Security) - ¡IMPORTANTE!
+    # Solo descomentar la siguiente línea si el sitio se servirá 100% sobre HTTPS.
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+Options -Indexes
+
+<Files ".htaccess">
+    Require all denied
+</Files>
+# FIN - REGLAS DE SEGURIDAD

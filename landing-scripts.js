@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-question').forEach(button=>{button.onclick=()=>{const faqItem=button.parentElement;const isActive=faqItem.classList.toggle('active');const icon=button.querySelector('span:last-child');if(icon)icon.textContent=isActive ? '−':'+';}});});
